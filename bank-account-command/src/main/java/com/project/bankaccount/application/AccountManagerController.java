@@ -28,7 +28,7 @@ public class AccountManagerController {
         @RequestBody AmountDto deposit) {
         try {
             accountManagerCmdService.makeDeposit(accountId, deposit.getAmount());
-            return new ResponseEntity<>("Deposit amount has been processed successfully! ", HttpStatus.OK);
+            return new ResponseEntity<>("Deposit amount has been processed successfully!", HttpStatus.OK);
         } catch (BankAccountException e) {
             LOGGER.error(e.getMessage());
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -40,7 +40,7 @@ public class AccountManagerController {
         @RequestBody AmountDto withdrawal) {
         try {
             accountManagerCmdService.makeWithdrawal(accountId, withdrawal.getAmount());
-            return new ResponseEntity<>("Withdrawal amount has been processed successfully! ", HttpStatus.OK);
+            return new ResponseEntity<>("Withdrawal amount has been processed successfully!", HttpStatus.OK);
         } catch (BankAccountException e) {
             LOGGER.error(e.getMessage());
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);

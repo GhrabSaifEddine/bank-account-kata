@@ -29,7 +29,7 @@ public class AccountManagerControllerTest {
             .postForEntity("http://localhost:" + port + "/api/accounts/" + 1 + "/deposit", amountDto,
                 String.class);
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        assertEquals("Deposit amount has been processed successfully! ", responseEntity.getBody());
+        assertEquals("Deposit amount has been processed successfully!", responseEntity.getBody());
     }
 
     @Test
@@ -49,7 +49,7 @@ public class AccountManagerControllerTest {
             .postForEntity("http://localhost:" + port + "/api/accounts/" + 1 + "/withdrawal", amountDto,
                 String.class);
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        assertEquals("Withdrawal amount has been processed successfully! ", responseEntity.getBody());
+        assertEquals("Withdrawal amount has been processed successfully!", responseEntity.getBody());
     }
 
     @Test

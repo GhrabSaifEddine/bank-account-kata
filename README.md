@@ -13,6 +13,9 @@ Hexagonal Pattern also was used in order to separate internal logical functional
 The database used is H2. I choose it for its lightweight use, easy configuration and simple use ( H2 console is setted activated in conf files).
 Entity-relationship diagram is composed of 2 tables "bank_account" & "transaction", that widely responds to our need.
 
+Tests written for this project : Unitary tests, Integration tests & BDD tests using Cucumber.
+
+
 <b>Looking forward to discuss further the technical details.</b>
 
 # Useful curl calls
