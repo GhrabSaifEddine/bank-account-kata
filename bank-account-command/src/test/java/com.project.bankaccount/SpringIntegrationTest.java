@@ -6,13 +6,15 @@ import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @CucumberContextConfiguration
-@SpringBootTest(classes = CommandApplication.class, webEnvironment = WebEnvironment.DEFINED_PORT)
+@SpringBootTest(classes = {CommandApplication.class}, webEnvironment = WebEnvironment.DEFINED_PORT)
+@ActiveProfiles("cucumber")
 public class SpringIntegrationTest {
     private static final String BASIC_URL = "http://localhost:8080" + "/api/accounts/";
     protected RestTemplate restTemplate = null;
